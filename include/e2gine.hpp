@@ -26,3 +26,21 @@ void Begin(SDL_Color color = {0,0,0,255});
 void End();
 
 void CloseE2gine();
+
+// Structure to define a rectangle
+struct Rectangle{
+    float x;
+    float y;
+    float width;
+    float height;
+};
+// Vector2D structure
+struct Vec2{
+    float x;
+    float y;
+};
+
+// Draws a filled rectangle on the screen
+void DrawRectangleRec(Rectangle rect, SDL_Color color);
+void DrawRectangleVec(Vec2 position, Vec2 size, SDL_Color color);
+void DrawRectangle(float x, float y, float width, float height, SDL_Color color);

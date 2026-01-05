@@ -2,11 +2,17 @@
 #include "e2gine.hpp"
 
 int main(){
-    e2gine_init("E2gine Window", 800, 600);
+    e2gine_init("E2gine Exemple", 800, 600);
+
+    Rectangle rect = {50, 50, 300, 200};
+    Vec2 position = {400, 300};
+    Vec2 size = {100, 150};
 
     while(windowShouldClose()) {
-
+        
         Begin(YELLOW);
+        DrawRectangle(rect, RED);
+        DrawRectangleVec(position, size, BLUE);
 
         End();
     }

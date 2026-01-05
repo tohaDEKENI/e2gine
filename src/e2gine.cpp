@@ -48,3 +48,22 @@ void CloseE2gine(){
     }
     SDL_Quit();
 }
+
+// Draws a filled rectangle on the screen
+void DrawRectangleRec(Rectangle rect, SDL_Color color){
+    SDL_FRect sdlRect = {rect.x, rect.y, rect.width, rect.height};
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderFillRect(renderer, &sdlRect);
+}
+
+void DrawRectangleVec(Vec2 position, Vec2 size, SDL_Color color){
+    SDL_FRect sdlRect = {position.x, position.y, size.x, size.y};
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderFillRect(renderer, &sdlRect);
+}
+
+void DrawRectangle(float x, float y, float width, float height, SDL_Color color){
+    SDL_FRect sdlRect = {x, y, width, height};
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderFillRect(renderer, &sdlRect);
+}
