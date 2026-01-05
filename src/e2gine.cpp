@@ -1,5 +1,6 @@
 #include "e2gine.hpp"  
 
+// Define global SDL_Window and SDL_Renderer pointers
 SDL_Window *window = nullptr;
 SDL_Renderer *renderer = nullptr;
 
@@ -20,14 +21,14 @@ bool windowShouldClose(){
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_EVENT_QUIT) {
             return false;
-        }
+        } 
     }
     return true;
 }
 
 // Clear the screen at the beginning of the frame
-void Begin(){
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+void Begin(SDL_Color color){
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderClear(renderer);
 }
 // Present the rendered content at the end of the frame

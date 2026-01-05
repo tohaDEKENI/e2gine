@@ -6,13 +6,12 @@ int main(){
 
     while(windowShouldClose()) {
 
-        Begin();
+        Begin(YELLOW);
 
         End();
     }
 
     CloseE2gine(); 
-
     return 0;
 }
 
