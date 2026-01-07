@@ -8,14 +8,21 @@ int main(){
     Vec2 position = {400, 300};
     Vec2 size = {100, 150};
 
+    int x = 500;
+
     while(windowShouldClose()) {
         
+        //x += 1;
+
         Begin(BLACK);
         DrawRectangleRec(rect, RED);
         DrawRectangleVec(position, size, BLUE);
 
         DrawLine(10,10 ,500,500,BLUE);
         DrawPoint(500,40,RED);
+
+        DrawCircle(x,50,30,GREEN);
+        DrawCircle(x,50,10,RED);
         End();
     }
 

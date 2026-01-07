@@ -40,6 +40,10 @@ struct Vec2{
     float y;
 };
 
+struct Vec3{
+    float x,y,z;
+};
+
 // Draws a filled rectangle on the screen
 void DrawRectangleRec(Rectangle rect, SDL_Color color);
 void DrawRectangleVec(Vec2 position, Vec2 size, SDL_Color color);
@@ -52,3 +56,8 @@ void DrawLineVec(Vec2 start,Vec2 end,SDL_Color color);
 // Draw points
 void DrawPoint(float x ,float y,SDL_Color color);
 void DrawPointVec(Vec2 point,SDL_Color color);
+
+// Draw circle
+void DrawCircle(int cx, int cy, int radius,SDL_Color color);
+void DrawCircleVec(Vec2 pos, int radius,SDL_Color color);
+void DrawCircleVec3(Vec3 props ,SDL_Color color);

@@ -1,4 +1,5 @@
 #include "e2gine.hpp"  
+#include <cmath>
 
 // Define global SDL_Window and SDL_Renderer pointers
 SDL_Window *window = nullptr;
@@ -90,3 +91,36 @@ void DrawPointVec(Vec2 point,SDL_Color color){
     SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
     SDL_RenderPoint(renderer,point.x,point.y);
 }
+
+// Draw circle
+void DrawCircle(int cx, int cy, int radius,SDL_Color color)
+{
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
+    for (int dy = -radius; dy <= radius; dy++) {
+        int dx = (int)sqrt(radius * radius - dy * dy);
+        SDL_RenderLine(renderer,
+                       cx - dx, cy + dy,
+                       cx + dx, cy + dy);
+    }
+}
+
+void DrawCircleVec(Vec2 pos, int radius,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
+    for (int dy = -radius; dy <= radius; dy++) {
+        int dx = (int)sqrt(radius * radius - dy * dy);
+        SDL_RenderLine(renderer,
+                       pos.x - dx, pos.y + dy,
+                       pos.x + dx, pos.y + dy);
+    }
+}
+
+void DrawCircleVec3(Vec3 props ,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
+    for (int dy = -props.z; dy <= props.z; dy++) {
+        int dx = (int)sqrt(props.z * props.z - dy * dy);
+        SDL_RenderLine(renderer,
+                       props.x - dx, props.y + dy,
+                       props.x + dx, props.y + dy);
+    }
+}
+
