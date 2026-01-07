@@ -15,6 +15,7 @@ int main(){
         DrawRectangleVec(position, size, BLUE);
 
         DrawLine(10,10 ,500,500,BLUE);
+        DrawPoint(500,40,RED);
         End();
     }
 

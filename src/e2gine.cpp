@@ -79,3 +79,14 @@ void DrawLineVec(Vec2 start,Vec2 end,SDL_Color color){
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderLine(renderer, start.x,start.y,end.x,end.y);
 }
+
+// Draw points
+void DrawPoint(float x ,float y,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
+    SDL_RenderPoint(renderer,x,y);
+}
+
+void DrawPointVec(Vec2 point,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
+    SDL_RenderPoint(renderer,point.x,point.y);
+}

@@ -46,6 +46,9 @@ void DrawRectangleVec(Vec2 position, Vec2 size, SDL_Color color);
 void DrawRectangle(float x, float y, float width, float height, SDL_Color color);
 
 // Draws lines
-
 void DrawLine(float x1, float y1, float x2, float y2,SDL_Color color);
 void DrawLineVec(Vec2 start,Vec2 end,SDL_Color color);
+
+// Draw points
+void DrawPoint(float x ,float y,SDL_Color color);
+void DrawPointVec(Vec2 point,SDL_Color color);
