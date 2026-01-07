@@ -67,3 +67,15 @@ void DrawRectangle(float x, float y, float width, float height, SDL_Color color)
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderFillRect(renderer, &sdlRect);
 }
+
+
+// Draw line on the screen
+void DrawLine(float x1, float y1, float x2, float y2,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderLine(renderer, x1, y1, x2, y2);
+}
+
+void DrawLineVec(Vec2 start,Vec2 end,SDL_Color color){
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderLine(renderer, start.x,start.y,end.x,end.y);
+}

@@ -10,10 +10,11 @@ int main(){
 
     while(windowShouldClose()) {
         
-        Begin(YELLOW);
-        DrawRectangle(rect, RED);
+        Begin(BLACK);
+        DrawRectangleRec(rect, RED);
         DrawRectangleVec(position, size, BLUE);
 
+        DrawLine(10,10 ,500,500,BLUE);
         End();
     }
 

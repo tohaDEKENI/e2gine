@@ -44,3 +44,8 @@ struct Vec2{
 void DrawRectangleRec(Rectangle rect, SDL_Color color);
 void DrawRectangleVec(Vec2 position, Vec2 size, SDL_Color color);
 void DrawRectangle(float x, float y, float width, float height, SDL_Color color);
+
+// Draws lines
+
+void DrawLine(float x1, float y1, float x2, float y2,SDL_Color color);
+void DrawLineVec(Vec2 start,Vec2 end,SDL_Color color);
